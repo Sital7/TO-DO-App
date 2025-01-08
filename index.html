@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do App with Columns</title>
+</head>
+<body>
+    <div class="theme-toggle">
+        <label class="switch">
+            <button id="themeToggle">Theme</button>
+            <span class="slider round"></span>
+        </label>
+    </div>
+
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        <div class="board">
+            <!-- To-Do Column -->
+            <div class="column" id="todoColumn">
+                <h2>To-Do</h2>
+                <button class="addTaskBtn" data-column="todo">Add Task</button>
+                <div class="task-input hidden" id="todoInput">
+                    <input type="text" placeholder="Title" class="task-title">
+                    <textarea placeholder="Description" class="task-desc"></textarea>
+                    <button class="saveTaskBtn">Save</button>
+                </div>
+                <div class="task-list" id="todoList"></div>
+            </div>
+
+            <!-- In-Progress Column -->
+            <div class="column" id="inProgressColumn">
+                <h2>In-Progress</h2>
+                <button class="addTaskBtn" data-column="inProgress">Add Task</button>
+                <div class="task-input hidden" id="inProgressInput">
+                    <input type="text" placeholder="Title" class="task-title">
+                    <textarea placeholder="Description" class="task-desc"></textarea>
+                    <button class="saveTaskBtn">Save</button>
+                </div>
+                <div class="task-list" id="inProgressList"></div>
+            </div>
+
+            <!-- Done Column -->
+            <div class="column" id="doneColumn">
+                <h2>Done</h2>
+                <button class="addTaskBtn" data-column="done">Add Task</button>
+                <div class="task-input hidden" id="doneInput">
+                    <input type="text" placeholder="Title" class="task-title">
+                    <textarea placeholder="Description" class="task-desc"></textarea>
+                    <button class="saveTaskBtn">Save</button>
+                </div>
+                <div class="task-list" id="doneList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
